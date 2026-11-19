@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蹲价助手 Price Sentry — 盯住价格，降了喊你</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC",sans-serif; background:#0f0f1a; color:#eee; }
+  .hero { max-width:860px; margin:0 auto; padding:80px 24px 60px; text-align:center; }
+  .badge { display:inline-block; background:#e9456022; color:#e94560; border:1px solid #e9456055; border-radius:999px; padding:4px 16px; font-size:13px; margin-bottom:24px; }
+  h1 { font-size:44px; line-height:1.25; margin-bottom:20px; }
+  h1 span { color:#e94560; }
+  .sub { color:#aab; font-size:18px; line-height:1.8; max-width:640px; margin:0 auto 40px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; max-width:860px; margin:0 auto; padding:0 24px 60px; }
+  .card { background:#1a1a2e; border:1px solid #ffffff14; border-radius:16px; padding:28px; text-align:left; }
+  .card h3 { font-size:18px; margin-bottom:10px; }
+  .card p { color:#99a; font-size:14px; line-height:1.7; }
+  .flow { max-width:860px; margin:0 auto; padding:0 24px 60px; }
+  .flow h2 { text-align:center; font-size:26px; margin-bottom:32px; }
+  .steps { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+  .step { flex:1; min-width:180px; background:#16162a; border-radius:12px; padding:20px; text-align:center; }
+  .step .num { color:#e94560; font-size:28px; font-weight:700; }
+  .step p { color:#99a; font-size:14px; margin-top:8px; line-height:1.6; }
+  footer { text-align:center; color:#667; font-size:13px; padding:32px; }
+  a { color:#e94560; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="badge">v0.1.0 · 开发中</div>
+    <h1>想买的先<span>蹲</span>着，<br>降价了微信喊你</h1>
+    <p class="sub">淘宝/京东促销信息散落在邮件、短信、App 推送里，没人有空天天比价。把商品链接丢给蹲价助手，它替你盯历史价格曲线，到位了推送通知。</p>
+  </section>
+
+  <section class="cards">
+    <div class="card"><h3>📉 历史价曲线</h3><p>联盟 API 定时快照，90 天价格走势一眼看穿"假折扣"。</p></div>
+    <div class="card"><h3>🎯 目标价提醒</h3><p>设个心理价位，到了就推微信订阅消息，一天最多一条不轰炸。</p></div>
+    <div class="card"><h3>🔍 双平台覆盖</h3><p>淘宝、京东官方联盟接口取数，不爬页面，稳定合规。</p></div>
+  </section>
+
+  <section class="flow">
+    <h2>三步上手</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><p>粘贴商品链接<br>加入蹲价清单</p></div>
+      <div class="step"><div class="num">2</div><p>看历史价曲线<br>设目标价或降幅</p></div>
+      <div class="step"><div class="num">3</div><p>授权订阅消息<br>降价自动推送</p></div>
+    </div>
+  </section>
+
+  <footer>
+    代码开源：<a href="https://github.com/fml8023yd/price-sentry">github.com/fml8023yd/price-sentry</a> · MIT License
+  </footer>
+</body>
+</html>
