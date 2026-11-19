@@ -1,0 +1,14 @@
+{
+  "description": "蹲价助手 - 淘宝/京东商品价格追踪小程序",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "price-sentry",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false
+  },
+  "libVersion": "latest"
+}
