@@ -1,0 +1,8 @@
+<view class="page">
+  <view class="hint">选择降价触发条件（微信订阅消息，一次授权一次推送）</view>
+  <view wx:for="{{rules}}" wx:key="key"
+        class="rule {{active === item.key ? 'on' : ''}}"
+        data-key="{{item.key}}" bindtap="onPick">
+    {{item.label}}
+  </view>
+</view>

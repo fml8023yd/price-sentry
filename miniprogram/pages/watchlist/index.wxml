@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="add-bar">
+    <input class="url-input" placeholder="粘贴淘宝/京东商品链接" value="{{inputUrl}}" bindinput="onInput" />
+    <button class="add-btn" bindtap="onAdd">蹲它</button>
+  </view>
+
+  <view wx:if="{{items.length === 0}}" class="empty">
+    还没有蹲价商品，把想买的链接粘上来
+  </view>
+
+  <view wx:for="{{items}}" wx:key="id" class="card" data-id="{{item.id}}" bindtap="onTapItem">
+    <image class="thumb" src="{{item.image_url}}" mode="aspectFill" />
+    <view class="meta">
+      <view class="title">{{item.title}}</view>
+      <view class="price-row">
+        <text class="price">¥{{item.latest_price}}</text>
+        <text class="trend {{item.latest_price < item.first_price ? 'down' : 'up'}}">{{item.trend}}</text>
+      </view>
+      <view class="target" wx:if="{{item.target_price}}">目标价 ¥{{item.target_price}}</view>
+    </view>
+    <view class="remove" catchtap="onRemove" data-id="{{item.id}}">×</view>
+  </view>
+</view>
